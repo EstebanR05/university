@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{indentfirst}
+\usepackage{apacite}
+
+\geometry{letterpaper, margin=2.54cm}
+
+% Normas APA
+\setstretch{2}
+\setlength{\parindent}{1.27cm}
+
+% Quitar numeración de secciones
+\titleformat{\section}
+{\bfseries\large\centering}
+{}
+{0em}
+{}
+
+\begin{document}
+
+\begin{center}
+\textbf{\LARGE ÁRBOL DE PROBLEMAS} \\[0.5cm]
+\textbf{METODOLOGÍA DE INVESTIGACIÓN} \\[0.5cm]
+\textbf{INGENIERÍA DE SISTEMAS} \\[1cm]
+
+ARIANA MARCELA ANDRADE BELLO \\
+EMMANUEL ESTEBAN RESTREPO PATARROYO \\[1cm]
+
+POPAYÁN \\
+MAYO 2026
+\end{center}
+
+\vspace{1cm}
+
+\section{Planteamiento del problema}
+
+En la actualidad, las plataformas digitales y las redes sociales se han convertido en uno de los principales medios de acceso a la información para gran parte de la población. Sin embargo, junto con este crecimiento también ha aumentado la circulación de noticias falsas o información no verificada \cite{shu2017fake}.
+
+Este fenómeno puede generar desinformación, influir en la opinión pública y afectar la forma en que las personas interpretan diferentes acontecimientos sociales, políticos o económicos. Además, la rápida propagación de este tipo de contenido dificulta su control y aumenta su impacto en la sociedad \cite{shu2017fake}. 
+
+Frente a este panorama, resulta relevante investigar soluciones tecnológicas capaces de identificar y analizar la veracidad de la información que circula en entornos digitales antes de que esta sea difundida masivamente \cite{zhou2020survey}. 
+
+Un sistema de este tipo debería ser capaz de examinar el contenido de las noticias, contrastar la información con diferentes fuentes confiables y detectar posibles inconsistencias o contradicciones \cite{castillo2011information}. 
+
+Aunque se han desarrollado diferentes soluciones basadas en inteligencia artificial para detectar noticias falsas, todavía existen varias limitaciones importantes. La mayoría de estos sistemas analizan únicamente el contenido del texto y utilizan datos previamente entrenados, lo que hace que funcionen bien en ciertos casos, pero tengan dificultades para adaptarse a información nueva o a contextos reales \cite{thorne2018automated}.  
+
+Además, muchos de estos enfoques no comparan la información con otras fuentes, por lo que una noticia puede ser clasificada sin verificar si realmente coincide o contradice lo que otros medios están reportando \cite{popat2018declare}.  
+
+En este sentido, la principal diferencia de esta propuesta es que utiliza modelos basados en arquitecturas Transformer, combinados con técnicas de recuperación de información y comparación semántica, tales como BERT, SBERT y enfoques tipo Retrieval-Augmented Generation (RAG), con el fin de contrastar el contenido de una noticia con múltiples fuentes y detectar inconsistencias \cite{ghadiri2022automated}. 
+
+A partir de este proceso de comparación, el sistema buscaría identificar posibles contradicciones o inconsistencias en los datos presentados. Como resultado, se generaría un indicador de confiabilidad que permita orientar a los usuarios sobre la posible veracidad de la información \cite{dey2024retrieval}. 
+
+\section{Pregunta Problema}
+
+¿Cómo influye un modelo basado en inteligencia artificial que permita analizar el contenido de noticias digitales y contrastarlo con múltiples fuentes de información en la detección de posibles inconsistencias y en la determinación de su nivel de confiabilidad?
+
+\section{Objetivo General}
+
+Proponer un modelo basado en inteligencia artificial que analice el contenido de noticias digitales y lo contraste con múltiples fuentes de información para detectar inconsistencias y determinar su nivel de confiabilidad.
+
+\section{Objetivos Específicos}
+
+\begin{itemize}
+    \item Analizar las características del contenido de noticias digitales y los criterios de confiabilidad utilizados en distintas fuentes de información.
+    
+    \item Desarrollar un modelo basado en inteligencia artificial que permita comparar noticias digitales con múltiples fuentes para identificar posibles inconsistencias.
+    
+    \item Evaluar el desempeño del modelo propuesto en la detección de inconsistencias y en la determinación del nivel de confiabilidad de las noticias digitales.
+\end{itemize}
+
+\section{Cadena de Búsqueda}
+
+\begin{verbatim}
+("artificial intelligence" OR AI OR "machine learning" OR NLP)
+AND ("fake news" OR misinformation OR disinformation)
+AND ("fact checking" OR "credibility assessment")
+AND (reliability OR trustworthiness OR inconsistencies)
+AND ("multiple sources" OR "cross-source analysis")
+\end{verbatim}
+
+\vspace{1cm}
+
+\bibliographystyle{apacite}
+\bibliography{bibliography}
+
+\end{document}
