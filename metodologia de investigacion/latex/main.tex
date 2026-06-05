@@ -130,7 +130,91 @@ La revisión de la literatura evidenció que la inteligencia artificial, el apre
 
 En este contexto, el presente proyecto resulta pertinente porque busca abordar estos vacíos mediante una solución que combine técnicas de inteligencia artificial, procesamiento del lenguaje natural y recuperación de información para analizar noticias digitales y contrastarlas con diversas fuentes confiables. A diferencia de gran parte de las investigaciones revisadas, la propuesta no se limita únicamente a clasificar contenido como verdadero o falso, sino que incorpora mecanismos de comparación multisource que permiten respaldar la evaluación de confiabilidad con evidencia adicional. De esta manera, el proyecto contribuye al desarrollo de herramientas más robustas y transparentes para apoyar la lucha contra la desinformación en entornos digitales.
 
+\section{Metodología de investigación}
+
+La presente investigación adopta la metodología Design Science Research Methodology (DSRM), propuesta por Peffers et al. (2007), la cual se orienta al diseño, desarrollo y evaluación de artefactos tecnológicos capaces de resolver problemas identificados en contextos reales. Esta metodología es ampliamente utilizada en áreas como ingeniería de software, sistemas de información e inteligencia artificial, debido a que permite construir soluciones tecnológicas fundamentadas en conocimiento científico y validar su efectividad mediante procesos sistemáticos de evaluación.
+
+La metodología DSRM contempla seis actividades principales: identificación del problema, definición de los objetivos de la solución, diseño y desarrollo del artefacto, demostración, evaluación y comunicación de resultados. Para efectos de esta investigación, dichas actividades se agrupan en tres fases principales alineadas con los objetivos específicos planteados.
+
+\textbf{Fase 1. Análisis del problema y definición de criterios de confiabilidad}
+
+Esta fase responde al objetivo específico de analizar las características del contenido de noticias digitales y los criterios de confiabilidad utilizados en distintas fuentes de información. Para ello, se realizará una revisión bibliográfica de investigaciones relacionadas con inteligencia artificial, procesamiento del lenguaje natural, fact-checking, recuperación de información y detección de noticias falsas.
+
+A partir del análisis de la literatura y de diferentes mecanismos de verificación utilizados por organizaciones especializadas, se identificarán los indicadores de confiabilidad que servirán como base para el diseño del modelo propuesto.
+
+\textbf{Actividades}
+
+\begin{itemize}
+    \item Revisión de literatura científica relacionada con detección de noticias falsas y evaluación de confiabilidad.
+    \item Análisis de noticias digitales y mecanismos de verificación utilizados por medios y organizaciones de fact-checking.
+    \item Identificación de criterios e indicadores de confiabilidad.
+    \item Definición de los requerimientos funcionales y no funcionales del modelo.
+    \item Establecimiento de los criterios de evaluación del sistema.
+\end{itemize}
+
+\textbf{Resultado esperado}
+
+Conjunto de criterios, indicadores y requerimientos que permitan evaluar la confiabilidad de noticias digitales y sirvan como base para el diseño del modelo de inteligencia artificial.
+
+\textbf{Fase 2. Diseño y desarrollo del modelo basado en inteligencia artificial}
+
+Esta fase corresponde al objetivo específico de desarrollar un modelo basado en inteligencia artificial que permita comparar noticias digitales con múltiples fuentes para identificar posibles inconsistencias.
+
+Con base en los criterios definidos en la fase anterior, se diseñará la arquitectura del modelo incorporando técnicas de procesamiento del lenguaje natural (NLP), recuperación de información, comparación semántica y modelos basados en arquitecturas Transformer. Asimismo, se conformará el conjunto de datos necesario para las pruebas y la validación del sistema.
+
+\textbf{Actividades}
+
+\begin{itemize}
+    \item Diseño de la arquitectura general del modelo.
+    \item Definición de las fuentes de información que serán utilizadas para el contraste de noticias.
+    \item Recolección y selección de noticias digitales para la construcción del conjunto de datos.
+    \item Implementación de técnicas de procesamiento del lenguaje natural.
+    \item Desarrollo de mecanismos de recuperación de información desde múltiples fuentes.
+    \item Implementación de algoritmos de comparación semántica y detección de inconsistencias.
+    \item Integración de los componentes del sistema.
+    \item Construcción del prototipo funcional.
+\end{itemize}
+
+\textbf{Resultado esperado}
+
+Modelo funcional capaz de analizar noticias digitales, recuperar información relacionada desde múltiples fuentes, identificar inconsistencias y generar indicadores de confiabilidad.
+
+\textbf{Fase 3. Demostración y evaluación del modelo}
+
+Esta fase responde al objetivo específico de evaluar el desempeño del modelo propuesto en la detección de inconsistencias y en la determinación del nivel de confiabilidad de las noticias digitales.
+
+La evaluación se realizará mediante pruebas experimentales utilizando noticias provenientes de diferentes medios informativos y contenidos previamente verificados. Se analizará la capacidad del sistema para recuperar información relevante, comparar fuentes, detectar discrepancias y generar resultados consistentes respecto a los criterios de confiabilidad definidos.
+
+\textbf{Actividades}
+
+\begin{itemize}
+    \item Definición de casos de prueba y escenarios de evaluación.
+    \item Selección de noticias digitales para validación.
+    \item Ejecución de pruebas sobre el prototipo funcional del modelo.
+    \item Evaluación del desempeño mediante métricas establecidas.
+    \item Análisis de resultados y comparación con los criterios definidos.
+    \item Identificación de oportunidades de mejora y ajuste del modelo.
+\end{itemize}
+
+\textbf{Métricas de evaluación}
+
+\begin{itemize}
+    \item Precisión en la identificación de inconsistencias.
+    \item Exactitud en la clasificación del nivel de confiabilidad.
+    \item Tiempo de respuesta del sistema.
+    \item Cobertura de fuentes analizadas.
+    \item Consistencia de los resultados obtenidos.
+\end{itemize}
+
+\textbf{Resultado esperado}
+
+Validación experimental del modelo propuesto, determinando su capacidad para apoyar la evaluación de la confiabilidad de noticias digitales mediante la identificación automática de inconsistencias y el contraste de información proveniente de múltiples fuentes.
+
+Finalmente, la aplicación de la metodología DSRM permitirá desarrollar y evaluar un artefacto tecnológico orientado a la detección de inconsistencias en noticias digitales y a la determinación de su nivel de confiabilidad mediante técnicas de inteligencia artificial, procesamiento del lenguaje natural y recuperación de información. De esta manera, se espera contribuir al desarrollo de herramientas que apoyen la verificación de información y la reducción de los efectos de la desinformación en entornos digitales, dando cumplimiento a los objetivos específicos y al objetivo general de la investigación.
+
 \vspace{1cm}
+
+\nocite{peffers2007dsrm}
 
 \bibliographystyle{apacite}
 \bibliography{bibliography}
