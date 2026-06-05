@@ -1,78 +1,138 @@
-@article{shu2017fake,
-  title={Fake news detection on social media: A data mining perspective},
-  author={Shu, Kai and Sliva, Amy and Wang, Suhang and Tang, Jiliang and Liu, Huan},
-  journal={ACM SIGKDD Explorations Newsletter},
-  volume={19},
-  number={1},
-  pages={22--36},
-  year={2017},
-  doi={10.1145/3137597.3137600}
-}
+\documentclass[12pt]{article}
 
-@article{monti2019fake,
-  title={Fake news detection on social media using geometric deep learning},
-  author={Monti, Federico and Frasca, Fabrizio and Eynard, Davide and Mannion, David and Bronstein, Michael M.},
-  journal={arXiv preprint arXiv:1902.06673},
-  year={2019}
-}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{indentfirst}
+\usepackage{apacite}
 
-@article{zhou2020survey,
-  title={A survey of fake news: Fundamental theories, detection methods, and opportunities},
-  author={Zhou, Xinyi and Zafarani, Reza},
-  journal={ACM Computing Surveys},
-  volume={53},
-  number={5},
-  pages={1--40},
-  year={2020},
-  doi={10.1145/3395046}
-}
+\geometry{letterpaper, margin=2.54cm}
 
-@inproceedings{castillo2011information,
-  title={Information credibility on Twitter},
-  author={Castillo, Carlos and Mendoza, Marcelo and Poblete, Barbara},
-  booktitle={Proceedings of the 20th International Conference on World Wide Web},
-  pages={675--684},
-  year={2011},
-  doi={10.1145/1963405.1963500}
-}
+% Normas APA
+\setstretch{2}
+\setlength{\parindent}{1.27cm}
 
-@inproceedings{thorne2018automated,
-  title={Automated fact checking: Task formulations, methods and future directions},
-  author={Thorne, James and Vlachos, Andreas},
-  booktitle={Proceedings of the 27th International Conference on Computational Linguistics (COLING)},
-  pages={3346--3359},
-  year={2018},
-  url={https://aclanthology.org/C18-1283/}
-}
+% Quitar numeración de secciones
+\titleformat{\section}
+{\bfseries\large\centering}
+{}
+{0em}
+{}
 
-@inproceedings{popat2018declare,
-  title={DeClarE: Debunking fake news and false claims using evidence-aware deep learning},
-  author={Popat, Kashyap and Mukherjee, Subhabrata and Yates, Andrew and Weikum, Gerhard},
-  booktitle={Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing},
-  pages={22--32},
-  year={2018},
-  doi={10.18653/v1/D18-1003}
-}
+\begin{document}
 
-@inproceedings{rashkin2017truth,
-  title={Truth of varying shades: Analyzing language in fake news and political fact-checking},
-  author={Rashkin, Hannah and Choi, Eunsol and Jang, Jin Yea and Volkova, Svitlana and Choi, Yejin},
-  booktitle={Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing},
-  pages={2931--2937},
-  year={2017},
-  doi={10.18653/v1/D17-1317}
-}
+\begin{center}
+\textbf{\LARGE MODELO BASADO EN INTELIGENCIA ARTIFICIAL PARA EVALUAR LA CONFIABILIDAD DE NOTICIAS DIGITALES MEDIANTE MÚLTIPLES FUENTES} \\[0.5cm]
+\textbf{METODOLOGÍA DE INVESTIGACIÓN} \\[0.5cm]
+\textbf{INGENIERÍA DE SISTEMAS} \\[1cm]
 
-@article{ghadiri2022automated,
-  title={Automated fake news detection using cross-checking with reliable sources},
-  author={Ghadiri, Zahra and Ranjbar, Mohsen and Ghanbarnejad, Fakhreddin and Raeisi, Sadegh},
-  journal={arXiv preprint arXiv:2201.00083},
-  year={2022}
-}
+ARIANA MARCELA ANDRADE BELLO \\
+EMMANUEL ESTEBAN RESTREPO PATARROYO \\[1cm]
 
-@article{dey2024retrieval,
-  title={Retrieval augmented verification: Real-time evidence-guided fact-checking},
-  author={Dey, Anjan U. and Llabr{\'e}s, Albert and Valveny, Ernest and Karatzas, Dimosthenis},
-  journal={arXiv preprint arXiv:2404.10702},
-  year={2024}
-}
+POPAYÁN \\
+JUNIO 2026
+\end{center}
+
+\vspace{1cm}
+
+\section{Planteamiento del problema}
+
+En la actualidad, las plataformas digitales y las redes sociales se han convertido en uno de los principales medios de acceso a la información para gran parte de la población. Sin embargo, junto con este crecimiento también ha aumentado la circulación de noticias falsas o información no verificada \cite{shu2017fake}.
+
+Este fenómeno puede generar desinformación, influir en la opinión pública y afectar la forma en que las personas interpretan diferentes acontecimientos sociales, políticos o económicos. Además, la rápida propagación de este tipo de contenido dificulta su control y aumenta su impacto en la sociedad \cite{shu2017fake}. 
+
+Frente a este panorama, resulta relevante investigar soluciones tecnológicas capaces de identificar y analizar la veracidad de la información que circula en entornos digitales antes de que esta sea difundida masivamente \cite{zhou2020survey}. 
+
+Un sistema de este tipo debería ser capaz de examinar el contenido de las noticias, contrastar la información con diferentes fuentes confiables y detectar posibles inconsistencias o contradicciones \cite{castillo2011information}. 
+
+Aunque se han desarrollado diferentes soluciones basadas en inteligencia artificial para detectar noticias falsas, todavía existen varias limitaciones importantes. La mayoría de estos sistemas analizan únicamente el contenido del texto y utilizan datos previamente entrenados, lo que hace que funcionen bien en ciertos casos, pero tengan dificultades para adaptarse a información nueva o a contextos reales \cite{thorne2018automated}.  
+
+Además, muchos de estos enfoques no comparan la información con otras fuentes, por lo que una noticia puede ser clasificada sin verificar si realmente coincide o contradice lo que otros medios están reportando \cite{popat2018declare}.  
+
+En este sentido, la principal diferencia de esta propuesta es que utiliza modelos basados en arquitecturas Transformer, combinados con técnicas de recuperación de información y comparación semántica, tales como BERT, SBERT y enfoques tipo Retrieval-Augmented Generation (RAG), con el fin de contrastar el contenido de una noticia con múltiples fuentes y detectar inconsistencias \cite{ghadiri2022automated}. 
+
+A partir de este proceso de comparación, el sistema buscaría identificar posibles contradicciones o inconsistencias en los datos presentados. Como resultado, se generaría un indicador de confiabilidad que permita orientar a los usuarios sobre la posible veracidad de la información \cite{dey2024retrieval}. 
+
+\section{Pregunta Problema}
+
+¿Cómo influye un modelo basado en inteligencia artificial que permita analizar el contenido de noticias digitales y contrastarlo con múltiples fuentes de información en la detección de posibles inconsistencias y en la determinación de su nivel de confiabilidad?
+
+\section{Objetivo General}
+
+Proponer un modelo basado en inteligencia artificial que analice el contenido de noticias digitales y lo contraste con múltiples fuentes de información para detectar inconsistencias y determinar su nivel de confiabilidad.
+
+\section{Objetivos Específicos}
+
+\begin{itemize}
+    \item Analizar las características del contenido de noticias digitales y los criterios de confiabilidad utilizados en distintas fuentes de información.
+    
+    \item Desarrollar un modelo basado en inteligencia artificial que permita comparar noticias digitales con múltiples fuentes para identificar posibles inconsistencias.
+    
+    \item Evaluar el desempeño del modelo propuesto en la detección de inconsistencias y en la determinación del nivel de confiabilidad de las noticias digitales.
+\end{itemize}
+
+\section{Cadena de Búsqueda}
+
+\begin{verbatim}
+("artificial intelligence" OR AI OR "machine learning" OR NLP)
+AND ("fake news" OR misinformation OR disinformation)
+AND ("fact checking" OR "credibility assessment")
+AND (reliability OR trustworthiness OR inconsistencies)
+AND ("multiple sources" OR "cross-source analysis")
+\end{verbatim}
+
+\section{Estado del Arte}
+
+La detección de noticias falsas se ha convertido en una de las principales áreas de investigación dentro de la inteligencia artificial debido al crecimiento de la desinformación en medios digitales y redes sociales. Con el propósito de identificar los avances más recientes relacionados con la detección automática de noticias falsas, se realizó una revisión bibliográfica utilizando bases de datos académicas especializadas como IEEE Xplore, Scopus, ScienceDirect, SpringerLink y otras fuentes indexadas. La búsqueda se efectuó mediante la cadena: ("artificial intelligence" OR AI OR "machine learning" OR NLP) AND ("fake news" OR misinformation OR disinformation) AND ("fact checking" OR "credibility assessment") AND (reliability OR trustworthiness OR inconsistencies) AND ("multiple sources" OR "cross-source analysis"). Inicialmente se identificaron 35 artículos. Posteriormente se aplicaron los criterios de inclusión y exclusión definidos para la investigación, seleccionando finalmente 10 artículos con alta relación respecto a la pregunta problema. Los estudios fueron organizados en tres secciones temáticas: técnicas de inteligencia artificial para detección de noticias falsas, verificación automatizada y fact-checking, y análisis de múltiples fuentes mediante NLP y recuperación de información.
+
+\subsection*{Inteligencia Artificial y Aprendizaje Automático para la Detección de Noticias Falsas}
+
+La detección de noticias falsas se ha convertido en una de las principales aplicaciones de la inteligencia artificial debido al impacto que la desinformación genera sobre la opinión pública, la toma de decisiones y la confianza en los medios digitales. Como respuesta a este problema, diversos investigadores han desarrollado soluciones basadas en aprendizaje automático, aprendizaje profundo y procesamiento del lenguaje natural con el propósito de automatizar la identificación de contenido engañoso y mejorar la eficiencia de los procesos de verificación. Los estudios analizados en esta sección abordan diferentes enfoques para la detección de noticias falsas, incluyendo modelos de clasificación basados en arquitecturas Transformer, asistentes inteligentes para la verificación automática de información y conjuntos de datos especializados para el entrenamiento de sistemas de inteligencia artificial. En conjunto, estas investigaciones permiten comprender los avances más recientes en el uso de técnicas computacionales para enfrentar la desinformación digital y proporcionan fundamentos relevantes para el desarrollo de soluciones orientadas a la evaluación de la confiabilidad de las noticias. 
+
+La creciente propagación de información falsa en entornos digitales ha impulsado el desarrollo de modelos de inteligencia artificial cada vez más sofisticados para apoyar la detección automática de noticias falsas. En este contexto, Yadav y colaboradores (2025) propusieron un marco integral basado en aprendizaje automático, aprendizaje profundo y procesamiento del lenguaje natural con el objetivo de evaluar la efectividad de diferentes técnicas de clasificación aplicadas a contenidos digitales. La investigación utilizó múltiples conjuntos de datos compuestos por publicaciones en redes sociales, artículos periodísticos y comentarios generados por usuarios, comparando algoritmos tradicionales como Naïve Bayes, Support Vector Machine y Random Forest con modelos avanzados de deep learning, entre ellos CNN, LSTM y BERT. Los resultados demostraron que los modelos basados en BERT obtuvieron el mejor desempeño en métricas como precisión, MCC y ROC-AUC, superando consistentemente a los métodos tradicionales gracias a su capacidad para comprender el contexto semántico de los textos. Los autores concluyen que los modelos de lenguaje contextualizados representan una solución eficaz para combatir la desinformación digital, aunque resaltan la necesidad de abordar aspectos éticos relacionados con el sesgo algorítmico y la moderación automática de contenidos. Este estudio aporta al proyecto fundamentos técnicos relevantes para la utilización de modelos NLP avanzados en el análisis de credibilidad y detección de noticias falsas.
+
+El crecimiento acelerado de la desinformación en redes sociales ha motivado la búsqueda de estrategias tecnológicas capaces de responder a la velocidad con la que circulan las noticias falsas en internet. Bajo esta premisa, Sharma (2024) examinó el potencial de diferentes tecnologías de inteligencia artificial para detectar, clasificar y mitigar contenido desinformativo en plataformas digitales como Facebook, X, Instagram y TikTok. La metodología consistió en realizar un análisis exhaustivo de sistemas existentes basados en procesamiento del lenguaje natural, aprendizaje automático y aprendizaje profundo, evaluando su efectividad en diversos escenarios de aplicación. Los resultados evidenciaron que estos sistemas alcanzan niveles de precisión entre el 78 \% y el 94 \%, demostrando una alta capacidad para identificar información falsa; sin embargo, también se identificaron dificultades para interpretar contenido satírico, dependiente del contexto o asociado a nuevas estrategias de manipulación informativa. Como conclusión, el autor señala que la inteligencia artificial constituye una herramienta fundamental para combatir la desinformación, aunque su efectividad aumenta cuando se complementa con supervisión humana y políticas adecuadas de moderación. Este trabajo fortalece la base conceptual del proyecto al demostrar el potencial de la IA como mecanismo para evaluar la confiabilidad de la información digital. 
+
+La necesidad de reducir los tiempos de respuesta frente a la propagación de noticias falsas ha impulsado el desarrollo de soluciones automatizadas capaces de verificar información en tiempo real. Con este propósito, Patel y colaboradores (2024) diseñaron un asistente inteligente para la verificación de noticias que combina inteligencia artificial generativa con mecanismos de recuperación asíncrona de datos. El objetivo principal fue desarrollar un sistema capaz de extraer afirmaciones clave contenidas en una noticia y contrastarlas automáticamente con información obtenida desde diversas fuentes disponibles en línea. La investigación describe la arquitectura e implementación de la herramienta, así como una evaluación preliminar de su funcionamiento en procesos de verificación automatizada. Los resultados mostraron que la integración de IA generativa con procesos de recuperación de información permite agilizar significativamente la comprobación de hechos y emitir veredictos sobre la veracidad de una noticia de forma eficiente. Los autores concluyen que este tipo de sistemas representa una alternativa prometedora para enfrentar los desafíos actuales de la desinformación digital. Para el presente proyecto, este estudio constituye un antecedente especialmente relevante debido a que incorpora mecanismos de búsqueda y contraste de información que se alinean directamente con la propuesta de evaluar noticias mediante múltiples fuentes de información. 
+
+La creciente complejidad de los fenómenos de desinformación ha llevado a los investigadores a explorar arquitecturas avanzadas de aprendizaje profundo capaces de comprender el contexto semántico de los contenidos digitales. En esta línea, Khan y colaboradores (2024) realizaron una investigación orientada a evaluar el desempeño de diferentes modelos de inteligencia artificial aplicados a la detección de noticias falsas, incluyendo CNN, RNN, LSTM, BERT, GPT-3 y RoBERTa. Para ello, utilizaron conjuntos de datos ampliamente reconocidos como FakeNewsNet, LIAR, PHEME y PolitiFact, analizando indicadores de precisión, tiempo computacional y capacidad de adaptación a distintos tipos de desinformación. Los resultados evidenciaron que los modelos basados en arquitecturas Transformer alcanzan precisiones superiores al 95 \%, superando significativamente a los enfoques tradicionales de aprendizaje automático debido a su capacidad para capturar relaciones contextuales complejas dentro del texto. Asimismo, el estudio identificó que factores como el análisis de sentimientos, la confiabilidad de las fuentes y las interacciones sociales desempeñan un papel importante en la detección de contenido falso. Los autores concluyen que la combinación de procesamiento del lenguaje natural, análisis de redes sociales y modelos Transformer representa una de las estrategias más efectivas para combatir la desinformación en tiempo real. Este trabajo aporta fundamentos técnicos sólidos para la selección de modelos de análisis semántico dentro de la propuesta de investigación. 
+
+Además del desarrollo de nuevos algoritmos, la construcción de conjuntos de datos especializados se ha convertido en un factor determinante para mejorar el desempeño de los sistemas de detección de noticias falsas. Bajo esta perspectiva, Alsubaie y colaboradores (2024) desarrollaron un nuevo conjunto de datos diseñado específicamente para representar las características lingüísticas y contextuales presentes en las redes sociales. El objetivo de la investigación fue mejorar la capacidad de los modelos de aprendizaje profundo para identificar noticias falsas en escenarios donde la información se propaga de manera rápida y masiva. Para ello, se emplearon metodologías de deep learning orientadas a la extracción y análisis de características textuales y contextuales provenientes de publicaciones digitales. Los resultados demostraron que el uso de datos más representativos del entorno social permite entrenar modelos más precisos y mejorar significativamente la detección de contenido engañoso en tiempo real. Los autores concluyen que la disponibilidad de conjuntos de datos adecuados es un elemento fundamental para fortalecer la calidad y confiabilidad de los sistemas automatizados de detección de noticias falsas. Este estudio aporta al proyecto una referencia importante sobre la necesidad de utilizar fuentes de información contextualizadas y representativas para optimizar los procesos de análisis y clasificación de noticias digitales.
+
+Los estudios revisados evidencian que la inteligencia artificial, particularmente a través del aprendizaje automático, el aprendizaje profundo y el procesamiento del lenguaje natural, ha alcanzado niveles significativos de efectividad en la detección de noticias falsas. En conjunto, las investigaciones demuestran que los modelos basados en arquitecturas avanzadas como BERT, RoBERTa y otros Transformers superan a los métodos tradicionales al ofrecer una mejor comprensión contextual y semántica de los textos, alcanzando altos niveles de precisión en diferentes escenarios de aplicación. Asimismo, se observa una tendencia hacia la automatización de los procesos de verificación mediante asistentes inteligentes y sistemas capaces de analizar grandes volúmenes de información en tiempo real. Sin embargo, los autores coinciden en que persisten desafíos relacionados con la interpretación de contextos complejos, la evolución constante de las estrategias de desinformación y la dependencia de datos de entrenamiento representativos. Aunque estas investigaciones aportan soluciones sólidas para la clasificación automática de noticias falsas, la mayoría se centra principalmente en el análisis del contenido textual y no en la contrastación de información con múltiples fuentes externas. Esta limitación justifica la pertinencia del presente proyecto, el cual busca complementar las capacidades de la inteligencia artificial mediante mecanismos de recuperación de información y comparación entre diversas fuentes confiables para fortalecer la evaluación de la credibilidad y confiabilidad de las noticias digitales.
+
+\subsection*{Fact-checking automatizado y evaluación de confiabilidad}
+
+Además de los avances en la detección automática de noticias falsas mediante inteligencia artificial, la comunidad científica ha dedicado esfuerzos significativos al desarrollo de sistemas orientados a la verificación de hechos y la evaluación de la confiabilidad de la información. Estos enfoques buscan ir más allá de la simple clasificación de contenidos, incorporando mecanismos capaces de contrastar afirmaciones, analizar evidencia externa y determinar el grado de credibilidad de una noticia antes de su difusión. En este contexto, las tecnologías de inteligencia artificial, procesamiento del lenguaje natural y recuperación de información han permitido fortalecer los procesos de fact-checking, aumentando su velocidad, alcance y precisión. Los estudios analizados en esta sección examinan distintas estrategias para automatizar la verificación de información, integrar múltiples fuentes de evidencia y proporcionar a los usuarios información más confiable para la toma de decisiones en entornos digitales. 
+
+La creciente cantidad de desinformación que circula en plataformas digitales ha obligado a las organizaciones de fact-checking a incorporar herramientas tecnológicas que permitan optimizar sus procesos de verificación. Con el objetivo de comprender cómo se está produciendo esta transformación, Mendes, Tavares y colaboradores (2024) analizaron el uso de tecnologías de automatización e inteligencia artificial en las principales agencias ibéricas de verificación certificadas por la International Fact-Checking Network (IFCN): Polígrafo, Verificat, Newtral y Maldita.es. La investigación empleó una metodología cualitativa basada en entrevistas semiestructuradas realizadas a representantes de estas organizaciones para identificar las herramientas utilizadas durante las diferentes etapas del proceso de fact-checking. Los resultados evidenciaron que la inteligencia artificial y la automatización son empleadas para monitorear contenido en redes sociales, filtrar información relevante, transcribir declaraciones verificables, seleccionar contenido enviado por la audiencia y apoyar la verificación de imágenes y videos. Los entrevistados coincidieron en que estas tecnologías han incrementado significativamente la capacidad operativa de los verificadores, permitiendo realizar análisis más rápidos y amplios. No obstante, los autores concluyen que, aunque la automatización constituye un apoyo fundamental, la interpretación crítica y contextual de la información continúa dependiendo del juicio humano. Este estudio aporta al proyecto una visión práctica sobre la integración de herramientas inteligentes en procesos de verificación y evidencia la importancia de combinar automatización con supervisión humana para evaluar la confiabilidad de la información.
+
+La necesidad de proporcionar información confiable y verificable ha impulsado el desarrollo de plataformas que integran múltiples mecanismos de validación automática dentro de un mismo entorno. Bajo esta premisa, Patel y colaboradores (2024) propusieron una plataforma de noticias impulsada por inteligencia artificial que combina agregación de múltiples fuentes, verificación automática de hechos, resumen inteligente y detección de sesgos informativos. El objetivo de la investigación fue desarrollar un sistema capaz de recopilar noticias provenientes de diferentes medios y verificar su precisión mediante modelos avanzados de procesamiento del lenguaje natural y aprendizaje automático. La metodología incorporó técnicas de verificación multiagente, generación automática de resúmenes y algoritmos basados en BERT y RoBERTa para la recuperación de información y detección de sesgos. Los resultados mostraron que la integración de múltiples componentes permite ofrecer noticias más transparentes, accesibles y confiables, facilitando además la identificación de posibles inclinaciones informativas presentes en los contenidos analizados. Los autores concluyen que la combinación de agregación multisource, fact-checking automatizado y análisis de sesgos constituye una estrategia efectiva para mejorar la calidad de la información consumida por los usuarios. Este trabajo aporta elementos fundamentales para el presente proyecto, especialmente en lo relacionado con la comparación de múltiples fuentes y la generación de indicadores de confiabilidad basados en evidencia externa.
+
+La incorporación de evidencia externa en los sistemas de detección de noticias falsas ha surgido como una estrategia prometedora para mejorar la precisión de los procesos de verificación automatizada. En este contexto, Sharma y colaboradores (2024) desarrollaron una investigación orientada a analizar el papel de las fuentes externas de conocimiento en la detección automática de noticias falsas. El objetivo principal fue construir una taxonomía de los enfoques basados en evidencia y examinar cómo la información proveniente de bases de datos de fact-checking, medios confiables y otras fuentes verificadas puede fortalecer la evaluación de credibilidad de las noticias. La metodología consistió en una revisión y clasificación de diferentes estrategias de detección apoyadas en evidencia externa, incluyendo análisis de metadatos, contexto social, contenido generado por usuarios y colaboración con organizaciones especializadas en verificación de hechos. Los resultados evidenciaron que la integración de conocimiento externo permite mejorar la capacidad de los sistemas para validar afirmaciones, identificar inconsistencias y evaluar la confiabilidad de las fuentes consultadas. Los autores concluyen que los modelos basados en evidencia representan una evolución importante frente a los enfoques tradicionales centrados exclusivamente en el contenido textual. Este estudio constituye uno de los antecedentes más relevantes para el proyecto, ya que respalda directamente la utilización de múltiples fuentes confiables como mecanismo para fortalecer la evaluación automática de la veracidad de la información. 
+
+Los estudios analizados evidencian una evolución significativa desde los enfoques tradicionales de detección de noticias falsas hacia modelos orientados a la verificación de hechos y la evaluación integral de la confiabilidad de la información. En conjunto, las investigaciones demuestran que la incorporación de inteligencia artificial en los procesos de fact-checking permite automatizar tareas de monitoreo, análisis y validación de contenidos, mejorando la eficiencia y el alcance de los verificadores humanos. Asimismo, se observa un consenso respecto a la importancia de utilizar evidencia externa, múltiples fuentes de información y mecanismos de análisis de sesgos para fortalecer la credibilidad de los resultados obtenidos. Mientras que Mendes, Tavares y colaboradores (2024) destacan el papel de la automatización como apoyo a las organizaciones de verificación, Patel y colaboradores (2024) y Sharma y colaboradores (2024) avanzan hacia propuestas más robustas basadas en agregación multisource, verificación automática y contraste de información con fuentes confiables. En consecuencia, estos trabajos aportan fundamentos metodológicos sólidos para el presente proyecto, al demostrar que la evaluación de la confiabilidad no debe depender únicamente del análisis interno del contenido, sino también de la capacidad de contrastar afirmaciones con evidencia externa y fuentes verificadas, aspecto que constituye uno de los pilares fundamentales de la propuesta de investigación.
+
+\subsection*{Análisis multisource, comparación semántica y recuperación de información}
+
+A medida que las estrategias de desinformación se vuelven más sofisticadas, han surgido enfoques que buscan superar las limitaciones de los modelos tradicionales de clasificación mediante la incorporación de mecanismos de comparación entre fuentes y análisis contextual de la información. Estas propuestas parten de la premisa de que la veracidad de una noticia no puede determinarse únicamente a partir de su contenido textual, sino también mediante la contrastación de afirmaciones con otras fuentes confiables y el análisis de las relaciones existentes entre diferentes piezas informativas. En este contexto, el procesamiento del lenguaje natural, la recuperación de información y las técnicas de análisis semántico han adquirido un papel fundamental para identificar similitudes, discrepancias e inconsistencias entre múltiples fuentes. Los estudios presentados en esta sección exploran metodologías orientadas a la comparación multisource y al análisis avanzado de contenidos digitales, proporcionando antecedentes especialmente relevantes para el desarrollo de sistemas capaces de evaluar la confiabilidad de la información mediante la contrastación automática de evidencias.
+
+La necesidad de proporcionar herramientas que permitan a los usuarios verificar información de manera autónoma ha impulsado el desarrollo de soluciones basadas en la comparación de múltiples fuentes informativas. Con este objetivo, Dey, Llabrés, Valveny y Karatzas (2024) propusieron CrossRead, una plataforma diseñada para ayudar a los usuarios a comprobar la veracidad de artículos periodísticos mediante su contraste con noticias provenientes de medios confiables. La investigación desarrolló un proceso compuesto por tres etapas: procesamiento del artículo original, búsqueda de fuentes alternativas y generación de un informe de similitud entre los contenidos encontrados. Debido a la inexistencia de recursos adecuados para el idioma rumano, los autores construyeron dos nuevos corpus: uno basado en consultas de búsqueda generadas sintéticamente y otro conformado por pares de artículos anotados manualmente como similares o no similares. Los resultados demostraron que la plataforma permite identificar discrepancias entre diferentes fuentes de manera eficiente, facilitando la verificación rápida de contenidos y la detección de posibles inconsistencias informativas. Los autores concluyen que la comparación automática entre fuentes representa una estrategia efectiva para apoyar la lucha contra la desinformación y que la plataforma desarrollada constituye una base sólida para futuras mejoras. Este estudio aporta al proyecto uno de los antecedentes más cercanos a la propuesta de investigación, debido a que utiliza la contrastación de información proveniente de múltiples fuentes como mecanismo principal para evaluar la credibilidad de una noticia. 
+
+Además de la comparación entre fuentes, diversos investigadores han explorado enfoques basados en aprendizaje profundo capaces de analizar simultáneamente diferentes tipos de información asociada a la difusión de noticias falsas. En esta línea, Kumar y colaboradores (2024) desarrollaron una Técnica de Detección de Desinformación No Supervisada (UMD) orientada a identificar noticias falsas mediante el análisis conjunto de contenido textual, datos de usuario, patrones de propagación e imágenes compartidas en redes sociales. La metodología propuesta integra capas Bidirectional Gated Recurrent Unit (Bi-GRU), mecanismos de autoatención y una arquitectura basada en autoencoders para extraer características latentes y modelar relaciones complejas entre los distintos tipos de información analizados. La evaluación fue realizada sobre dos conjuntos de datos reales utilizando múltiples metodologías de comparación. Los resultados evidenciaron que el modelo alcanzó una precisión del 92,82 \%, superando aproximadamente en un 3 \% a enfoques ampliamente utilizados como Transformer y modelos híbridos CNN-RNN. Los autores concluyen que la combinación de inteligencia artificial, procesamiento del lenguaje natural y mecanismos de aprendizaje profundo no supervisado permite mejorar significativamente la identificación de contenido engañoso en entornos digitales. Para el presente proyecto, este estudio aporta evidencia sobre la importancia de incorporar análisis semántico avanzado y mecanismos de contextualización que permitan fortalecer la evaluación de confiabilidad de la información más allá de las técnicas tradicionales de clasificación. 
+
+Los estudios revisados muestran una tendencia hacia enfoques más avanzados que buscan complementar la detección automática de noticias falsas mediante mecanismos de comparación, contextualización y análisis de múltiples fuentes de información. Mientras que el trabajo de CrossRead demuestra que la contrastación entre noticias provenientes de diferentes medios permite identificar discrepancias y fortalecer los procesos de verificación, la propuesta basada en aprendizaje profundo no supervisado evidencia la importancia de analizar múltiples dimensiones de la información para mejorar la detección de contenido engañoso. En conjunto, ambas investigaciones destacan que la comprensión de la veracidad de una noticia requiere ir más allá del análisis aislado del texto, incorporando evidencia adicional, relaciones semánticas y contexto informativo. Estos hallazgos resultan especialmente relevantes para el presente proyecto, ya que respaldan la utilización de técnicas de recuperación de información, procesamiento del lenguaje natural y comparación multisource como elementos fundamentales para construir un sistema capaz de evaluar la confiabilidad de las noticias digitales mediante el contraste automático de información proveniente de diversas fuentes confiables.
+
+La revisión de la literatura evidenció que la inteligencia artificial, el aprendizaje automático y el procesamiento del lenguaje natural se han consolidado como las principales tecnologías para combatir la desinformación digital. Los estudios analizados muestran avances significativos en la detección automática de noticias falsas, la verificación de hechos y la evaluación de la confiabilidad de la información mediante modelos de aprendizaje profundo, sistemas de fact-checking automatizado y mecanismos de análisis de múltiples fuentes. Entre las principales fortalezas identificadas se destacan la capacidad de procesar grandes volúmenes de información en tiempo real, los altos niveles de precisión alcanzados por los modelos basados en arquitecturas Transformer y la incorporación de evidencia externa para fortalecer los procesos de verificación. Sin embargo, también se identificaron limitaciones relacionadas con la dependencia de conjuntos de datos específicos, la dificultad para interpretar contextos complejos y la escasez de propuestas que integren de manera conjunta detección automática, recuperación de información y contraste entre múltiples fuentes confiables.
+
+En este contexto, el presente proyecto resulta pertinente porque busca abordar estos vacíos mediante una solución que combine técnicas de inteligencia artificial, procesamiento del lenguaje natural y recuperación de información para analizar noticias digitales y contrastarlas con diversas fuentes confiables. A diferencia de gran parte de las investigaciones revisadas, la propuesta no se limita únicamente a clasificar contenido como verdadero o falso, sino que incorpora mecanismos de comparación multisource que permiten respaldar la evaluación de confiabilidad con evidencia adicional. De esta manera, el proyecto contribuye al desarrollo de herramientas más robustas y transparentes para apoyar la lucha contra la desinformación en entornos digitales.
+
+\vspace{1cm}
+
+\bibliographystyle{apacite}
+\bibliography{bibliography}
+
+\end{document}
